@@ -11,6 +11,15 @@ body {
     border-bottom: #2b2b2b 1px solid;
 }
 
+#header h1 {
+    position: relative;
+    top: 13px;
+    left: 11px;
+    background: url(../img/title.png);
+    height: 47px;
+    width: 220px;
+}
+
 #header h1 span {
     display: none;
 }
