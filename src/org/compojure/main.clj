@@ -2,7 +2,7 @@
   (:use compojure))
 
 (def header
-  [:div#top
+  [:div#header
     [:h1 [:span "Compojure"]]])
 
 (def tabs
@@ -13,6 +13,8 @@
   (html
     [:html
       [:head
+        (include-css "css/reset.css")
+        (include-css "css/screen.css")
         [:title title]]
       [:body
         header
@@ -27,5 +29,8 @@
 (defroutes root
   (GET "/"
     (index))
+  (ANY "*"
+    (or (serve-file (params :*))
+        :next))
   (ANY "*"
     (page-not-found)))
