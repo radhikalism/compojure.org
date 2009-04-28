@@ -1,21 +1,21 @@
 body {
     background: #3f3f3f;
     color: #dddddd;
-    font-family: arial, sans-serif;
+    font-family: arial, helvetica, sans-serif;
 }
 
 #header {
+    background: url(../img/header-bg.png);
     width: 100%;
     height: 80px;
-    background: url(../img/header-bg.png);
     border-bottom: #2b2b2b 1px solid;
 }
 
 #header h1 {
+    background: url(../img/title.png);
     position: relative;
     top: 13px;
     left: 11px;
-    background: url(../img/title.png);
     height: 47px;
     width: 220px;
 }
@@ -32,7 +32,7 @@ ul#tabs {
 ul#tabs li {
     color: #999999;
     background: #202020;
-    font-family: verdana, sans-serif;
+    font-family: verdana, geneva, sans-serif;
     font-size: 10pt;
 
     border: 1px solid #484848;
@@ -55,14 +55,40 @@ ul#tabs li.current {
     background: #141414;
     border-top: 2px solid #141414;
     font-weight: bold;
-    letter-spacing: 0px;
 
     margin-top: -2px;
     padding-top: 4px;
 }
 
 #content {
+    font-size: 11pt;
     clear: both;
     padding-top: 10px;
-    padding-left: 8px;
+    padding-left: 10px;
+}
+
+h2 {
+    color: #eeeeee;
+    font-size: 15pt;
+    font-family: tahoma, geneva, sans-serif;
+    letter-spacing: 0.5pt;
+    margin-top: 2pt;
+    margin-bottom: 10pt;
+}
+
+pre.code {
+    background: #151515;
+    font-family: monospace;
+    font-size: 10pt;
+    line-height: 140%;
+
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-radius-top-left: 15px;
+    -webkit-border-radius-bottom-right: 15px;
+
+    display: block;
+    width: 40em;
+    padding: 15px;
+    margin: 13pt;
 }

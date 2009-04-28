@@ -23,10 +23,20 @@
         tabs
         body]]))
 
+(def example-code
+"(defroutes site
+  (GET \"/\"
+    (html [:h1 \"Hello World\"]))
+  (ANY \"*\"
+    (page-not-found)))")
+
 (defn index []
   (site-page "Compojure"
     [:div#content
-      "Lorem Ipsum"]))
+      [:h2 "Web Development in Clojure"]
+      "Lorem Ipsum"
+      [:pre.code
+        example-code]]))
 
 (defroutes root
   (GET "/"
