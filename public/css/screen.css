@@ -60,13 +60,6 @@ ul#tabs li.current {
     padding-top: 4px;
 }
 
-#content {
-    font-size: 11pt;
-    clear: both;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
 h2 {
     color: #eeeeee;
     font-size: 15pt;
@@ -74,6 +67,23 @@ h2 {
     letter-spacing: 0.5pt;
     margin-top: 2pt;
     margin-bottom: 10pt;
+}
+
+#content {
+    font-size: 11pt;
+    clear: both;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#content h2 {
+    background: #343434;
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-top: 6pt;
+    padding-bottom: 6pt;
+    border-top: 1px solid #444444;
+    border-bottom: 1px solid #444444;
 }
 
 pre.code {
