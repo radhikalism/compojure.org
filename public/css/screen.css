@@ -34,7 +34,6 @@ ul#tabs li {
     background: #202020;
     font-family: verdana, sans-serif;
     font-size: 10pt;
-    font-weight: bold;
 
     border: 1px solid #484848;
     border-top: none;
@@ -55,6 +54,9 @@ ul#tabs li.current {
     color: #dddddd;
     background: #141414;
     border-top: 2px solid #141414;
+    font-weight: bold;
+    letter-spacing: 0px;
+
     margin-top: -2px;
     padding-top: 4px;
 }

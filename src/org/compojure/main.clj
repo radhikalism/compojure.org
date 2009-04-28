@@ -7,8 +7,8 @@
 
 (def tabs
   [:ul#tabs
-    [:li.current "Home"]
-    [:li "Documentation"]
+    [:li "Home"]
+    [:li.current "Documentation"]
     [:li "Download"]])
 
 (defn site-page [title & body]
