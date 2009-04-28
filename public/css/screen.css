@@ -62,9 +62,9 @@ ul#tabs li.current {
 
 h2 {
     color: #eeeeee;
-    font-size: 15pt;
+    font-size: 14pt;
     font-family: tahoma, geneva, sans-serif;
-    letter-spacing: 0.5pt;
+    letter-spacing: 0.3pt;
     margin-top: 2pt;
     margin-bottom: 10pt;
 }
@@ -82,8 +82,8 @@ h2 {
     padding-left: 10px;
     padding-top: 6pt;
     padding-bottom: 6pt;
-    border-top: 1px solid #444444;
-    border-bottom: 1px solid #444444;
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #404040;
 }
 
 pre.code {
