@@ -1,0 +1,66 @@
+.syntaxhighlighter {
+    background: #151515;
+
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-radius-top-left: 15px;
+    -webkit-border-radius-bottom-right: 15px;
+
+    display: block;
+    width: 40em;
+    padding: 15px 10px 15px 10px;
+    margin: 13pt;
+}
+
+.syntaxhighlighter,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter span {
+	font-family: "lucida console", monaco, monospace;
+    font-size: 10pt;
+}
+
+.lines .line {
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+}
+
+.syntaxhighlighter .plain {
+    color: #dddddd;
+}
+
+.syntaxhighlighter .comment {
+    font-style: italic;
+    color: #888888;
+}
+
+.syntaxhighlighter .string {
+    color: #aaff66;
+}
+
+.syntaxhighlighter .keyword {
+    color: #66eeaa; 
+}
+
+.syntaxhighlighter .defs {
+    font-weight: bold;
+    color: #cc5577;
+}
+
+.syntaxhighlighter .macros {
+    color: #6699ee;
+}
+
+.syntaxhighlighter .funcs {
+    color: #eedd77;
+}
+
+.syntaxhighlighter .list {
+    color: #666666;
+}
+
+.syntaxhighlighter .vector,
+.syntaxhighlighter .map {
+    font-weight: bold;
+    color: #999999;
+}

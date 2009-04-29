@@ -85,20 +85,3 @@ h2 {
     border-top: 1px solid #404040;
     border-bottom: 1px solid #404040;
 }
-
-pre.code {
-    background: #151515;
-    font-family: monospace;
-    font-size: 10pt;
-    line-height: 140%;
-
-    -moz-border-radius-topleft: 15px;
-    -moz-border-radius-bottomright: 15px;
-    -webkit-border-radius-top-left: 15px;
-    -webkit-border-radius-bottom-right: 15px;
-
-    display: block;
-    width: 40em;
-    padding: 15px;
-    margin: 13pt;
-}
