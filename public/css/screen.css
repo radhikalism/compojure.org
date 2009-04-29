@@ -24,6 +24,12 @@ body {
     display: none;
 }
 
+.title-j {
+    font-style: italic;
+    color: #2255aa;
+    padding-left: 1pt;
+}
+
 ul#tabs {
     border-top: #393939 1px solid;
     padding-left: 4px;
@@ -66,7 +72,7 @@ h2 {
     font-family: tahoma, geneva, sans-serif;
     letter-spacing: 0.3pt;
     margin-top: 2pt;
-    margin-bottom: 10pt;
+    margin-bottom: 8pt;
 }
 
 h2#title {
@@ -80,6 +86,15 @@ h2#title {
 #content {
     font-size: 11pt;
     clear: both;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 10px;
+}
+
+#content ul {
+    list-style-type: disc;
+    padding-left: 10pt;
+}
+
+#content ul li {
+    margin: 2pt;
 }

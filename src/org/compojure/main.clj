@@ -29,6 +29,14 @@
         tabs
         body]]))
 
+(def points
+  [:ul
+    [:li "An open source web framework"]
+    [:li "... in Clojure!"]
+    [:li "That's consise"]
+    [:li "functional"]
+    [:li "and explicit"]])
+
 (def example-code
 ";; Example
 (defroutes greetings
@@ -42,9 +50,9 @@
 
 (defn index []
   (site-page "Compojure"
-    [:h2#title "Compojure is&#133;"]
+    [:h2#title "Compo" [:span.title-j "j"] "ure is&#133;"]
     [:div#content
-     ; "Lorem Ipsum"
+      points
       (source-code example-code)]))
 
 (defroutes root
