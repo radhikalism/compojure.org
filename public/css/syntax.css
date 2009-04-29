@@ -1,4 +1,18 @@
+pre, .syntaxhighlighter {
+	font-family: "lucida console", monaco, monospace;
+    font-size: 10pt;
+    line-height: 125%;
+}
+
+pre {
+    padding: 17px 15px 17px 15px;
+}
+
 .syntaxhighlighter {
+    padding: 16px 7px 16px 7px;
+}
+
+pre.code, .syntaxhighlighter {
     background: #151515;
     border: 1px solid #424242;
 
@@ -7,18 +21,8 @@
     -webkit-border-radius-top-left: 15px;
     -webkit-border-radius-bottom-right: 15px;
 
-    display: block;
     width: 40em;
-    padding: 16px 6px 16px 6px;
     margin: 13pt;
-}
-
-.syntaxhighlighter,
-.syntaxhighlighter div,
-.syntaxhighlighter code,
-.syntaxhighlighter span {
-	font-family: "lucida console", monaco, monospace;
-    font-size: 10pt;
 }
 
 .lines .line {
@@ -62,6 +66,5 @@
 
 .syntaxhighlighter .vector,
 .syntaxhighlighter .map {
-    font-weight: bold;
-    color: #999999;
+    color: #cccccc;
 }

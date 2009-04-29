@@ -38,7 +38,7 @@
     (page-not-found)))")
 
 (defn source-code [src]
-  [:pre {:class "brush:clojure"} src])
+  [:pre {:class "code brush:clojure"} src])
 
 (defn index []
   (site-page "Compojure"
