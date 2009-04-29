@@ -7,8 +7,8 @@
 
 (def tabs
   [:ul#tabs
-    [:li "Home"]
-    [:li.current "Documentation"]
+    [:li.current "Home"]
+    [:li "Documentation"]
     [:li "Download"]])
 
 (defn site-page [title & body]
@@ -42,8 +42,8 @@
 
 (defn index []
   (site-page "Compojure"
+    [:h2#title "Compojure is&#133;"]
     [:div#content
-     ; [:h2 "Web Development in Clojure"]
      ; "Lorem Ipsum"
       (source-code example-code)]))
 

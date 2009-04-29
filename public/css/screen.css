@@ -8,7 +8,7 @@ body {
     background: url(../img/header-bg.png);
     width: 100%;
     height: 80px;
-    border-bottom: #2b2b2b 1px solid;
+    border-bottom: #292929 1px solid;
 }
 
 #header h1 {
@@ -25,7 +25,7 @@ body {
 }
 
 ul#tabs {
-    border-top: #454545 1px solid;
+    border-top: #393939 1px solid;
     padding-left: 4px;
 }
 
@@ -35,7 +35,7 @@ ul#tabs li {
     font-family: verdana, geneva, sans-serif;
     font-size: 10pt;
 
-    border: 1px solid #484848;
+    border: 1px solid #424242;
     border-top: none;
 
     -moz-border-radius-bottomleft: 7px;
@@ -69,19 +69,17 @@ h2 {
     margin-bottom: 10pt;
 }
 
+h2#title {
+    color: #ffffff;
+    background: #313131;
+    margin-top: 0px; 
+    padding: 26pt 10px 9pt 10px;
+    border-bottom: 1px solid #454545;
+}
+
 #content {
     font-size: 11pt;
     clear: both;
     padding-top: 10px;
     padding-left: 10px;
-}
-
-#content h2 {
-    background: #343434;
-    margin-left: -10px;
-    padding-left: 10px;
-    padding-top: 6pt;
-    padding-bottom: 6pt;
-    border-top: 1px solid #404040;
-    border-bottom: 1px solid #404040;
 }
