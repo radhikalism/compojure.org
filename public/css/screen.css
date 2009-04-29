@@ -1,5 +1,5 @@
 body {
-    background: #3f3f3f;
+    background: #414141;
     color: #dddddd;
     font-family: arial, helvetica, sans-serif;
 }
@@ -31,11 +31,11 @@ ul#tabs {
 
 ul#tabs li {
     color: #999999;
-    background: #202020;
+    background: #1f1f1f;
     font-family: verdana, geneva, sans-serif;
     font-size: 10pt;
 
-    border: 1px solid #424242;
+    border: 1px solid #383838;
     border-top: none;
 
     -moz-border-radius-bottomleft: 7px;
@@ -71,7 +71,7 @@ h2 {
 
 h2#title {
     color: #ffffff;
-    background: #313131;
+    background: #323232;
     margin-top: 0px; 
     padding: 26pt 10px 9pt 10px;
     border-bottom: 1px solid #454545;
