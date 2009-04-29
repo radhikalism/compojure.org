@@ -29,17 +29,12 @@
         tabs
         body]]))
 
-(def points
-  [:ul#about
-    [:li "An open source web framework"]
-    [:li "... in Clojure!"]
-    [:li "That's consise"]
-    [:li "functional"]
-    [:li "and explicit"]])
+(def description
+  [:p "Compojure is an open source web framework for Clojure.
+      "])
 
 (def example-code
-";; Example
-(defroutes greetings
+"(defroutes greetings
   (GET \"/\"
     (html [:h1 \"Hello (World)\"]))
   (ANY \"*\"
@@ -48,16 +43,16 @@
 (defn source-code [src]
   [:pre {:class "code brush:clojure"} src])
 
-(defn index []
+(def index
   (site-page "Compojure"
-    [:h2#title "Compojure is&#133;"]
+    [:h2#title "Web development in Clojure"]
     [:div#content
-      ;points
+      description
       (source-code example-code)]))
 
 (defroutes root
   (GET "/"
-    (index))
+    index)
   (ANY "*"
     (or (serve-file (params :*))
         :next))
