@@ -1,7 +1,7 @@
 body {
     background: #414141;
     color: #dddddd;
-    font-family: arial, helvetica, sans-serif;
+    font-family: verdana, tahoma, geneva, sans-serif;
 }
 
 #header {
@@ -22,12 +22,6 @@ body {
 
 #header h1 span {
     display: none;
-}
-
-.title-j {
-    font-style: italic;
-    color: #2255aa;
-    padding-left: 1pt;
 }
 
 ul#tabs {
@@ -77,9 +71,11 @@ h2 {
 
 h2#title {
     color: #ffffff;
-    background: #323232;
+    background-color: #323232;
+    background: url(../img/sub-header-bg.png);
+    height: 30px;
     margin-top: 0px; 
-    padding: 26pt 10px 9pt 10px;
+    padding: 34px 10px 0 10px;
     border-bottom: 1px solid #454545;
 }
 
@@ -97,4 +93,15 @@ h2#title {
 
 #content ul li {
     margin: 2pt;
+}
+
+ul#about {
+    list-style-type: none;
+    font-size: 12pt;
+    margin-left: 15pt;
+    letter-spacing: 0.2pt;
+}
+
+ul#about li {
+    line-height: 24px;
 }

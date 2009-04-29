@@ -7,8 +7,8 @@
 
 (def tabs
   [:ul#tabs
-    [:li "Home"]
-    [:li.current "Documentation"]
+    [:li.current "Home"]
+    [:li "Documentation"]
     [:li "Download"]])
 
 (defn site-page [title & body]
@@ -30,7 +30,7 @@
         body]]))
 
 (def points
-  [:ul
+  [:ul#about
     [:li "An open source web framework"]
     [:li "... in Clojure!"]
     [:li "That's consise"]
@@ -50,9 +50,9 @@
 
 (defn index []
   (site-page "Compojure"
-    [:h2#title "Compo" [:span.title-j "j"] "ure is&#133;"]
+    [:h2#title "Compojure is&#133;"]
     [:div#content
-      points
+      ;points
       (source-code example-code)]))
 
 (defroutes root
