@@ -1,5 +1,6 @@
 .syntaxhighlighter {
     background: #151515;
+    border: 1px solid #424242;
 
     -moz-border-radius-topleft: 15px;
     -moz-border-radius-bottomright: 15px;
@@ -8,7 +9,7 @@
 
     display: block;
     width: 40em;
-    padding: 15px 10px 15px 10px;
+    padding: 16px 6px 16px 6px;
     margin: 13pt;
 }
 
