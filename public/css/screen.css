@@ -64,7 +64,6 @@ h2 {
     color: #eeeeee;
     font-size: 14pt;
     font-family: tahoma, geneva, sans-serif;
-    letter-spacing: 0.3pt;
     margin-top: 2pt;
     margin-bottom: 8pt;
 }
@@ -73,9 +72,11 @@ h2#title {
     color: #ffffff;
     background-color: #323232;
     background: url(../img/sub-header-bg.png);
-    height: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    height: 32px;
     margin-top: 0px; 
-    padding: 34px 10px 0 10px;
+    padding: 39px 12px 0 12px;
     border-bottom: 1px solid #454545;
 }
 
