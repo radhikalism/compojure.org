@@ -32,7 +32,7 @@
 (def description
   (list
     [:p "Compojure is an open source web framework for Clojure."]
-    [:p "It is in active development."]))
+    [:p "Here's an example of some source code:"]))
 
 (def example-code
 "(defroutes greetings
@@ -48,8 +48,8 @@
   (site-page "Compojure"
     [:h2#title "A Clojure web framework"]
     [:div#content
-      description]))
-;      (source-code example-code)]))
+      description
+      (source-code example-code)]))
 
 (defroutes root
   (GET "/"
