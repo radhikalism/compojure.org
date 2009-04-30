@@ -80,6 +80,10 @@ h2#title {
     border-bottom: 1px solid #454545;
 }
 
+p {
+    margin-bottom: 1em;
+}
+
 #content {
     font-size: 10.5pt;
     clear: both;

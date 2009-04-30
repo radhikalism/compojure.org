@@ -30,8 +30,9 @@
         body]]))
 
 (def description
-  [:p "Compojure is an open source web framework for Clojure.
-      "])
+  (list
+    [:p "Compojure is an open source web framework for Clojure."]
+    [:p "It is in active development."]))
 
 (def example-code
 "(defroutes greetings
@@ -45,10 +46,10 @@
 
 (def index
   (site-page "Compojure"
-    [:h2#title "Web development in Clojure"]
+    [:h2#title "A Clojure web framework"]
     [:div#content
-      description
-      (source-code example-code)]))
+      description]))
+;      (source-code example-code)]))
 
 (defroutes root
   (GET "/"
