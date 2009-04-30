@@ -59,3 +59,7 @@
         :next))
   (ANY "*"
     (page-not-found)))
+
+(defn run []
+  (run-server {:port 8080}
+    "/*" (servlet root)))
