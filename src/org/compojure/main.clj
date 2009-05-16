@@ -1,15 +1,6 @@
 (ns org.compojure.main
-  (:use compojure))
-
-(def header
-  [:div#header
-    [:h1 [:span "Compojure"]]])
-
-(def tabs
-  [:ul#tabs
-    [:li.current "Home"]
-    [:li "Documentation"]
-    [:li "Download"]])
+  (:use compojure)
+  (:use org.compojure.page))
 
 (defn site-page [title & body]
   (html
@@ -25,8 +16,8 @@
           "SyntaxHighlighter.all({light: true});")
         [:title title]]
       [:body
-        header
-        tabs
+        [:div#header [:h1 [:span "Compojure"]]]
+        [:ul#tabs (get-tabs "home")]
         [:div#content body]]]))
 
 (def description
