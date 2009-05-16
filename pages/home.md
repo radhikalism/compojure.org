@@ -1,4 +1,3 @@
-Home
-====
+# Web Applications in Clojure
 
-Hello World
+Compojure is an open source web framework for the Clojure programming language.
