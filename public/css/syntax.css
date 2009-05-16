@@ -1,6 +1,6 @@
 pre, .syntaxhighlighter {
 	font-family: "lucida console", monaco, monospace;
-    font-size: 10pt;
+    font-size: 9pt;
     line-height: 125%;
 }
 
@@ -12,7 +12,7 @@ pre {
     padding: 15px 7px 17px 7px;
 }
 
-pre.code, .syntaxhighlighter {
+pre, .syntaxhighlighter {
     background: #161616;
     border: 1px solid #424242;
 
@@ -23,6 +23,7 @@ pre.code, .syntaxhighlighter {
 
     width: 40em;
     margin: 13pt;
+    margin-left: 25pt;
 }
 
 .lines .line {

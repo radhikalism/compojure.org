@@ -1,7 +1,7 @@
 SyntaxHighlighter.brushes.Clojure = function() {
     var defs   = 'defroutes'
-    var macros = 'GET POST PUT DELETE HEAD ANY';
-    var funcs  = 'html page-not-found';
+    var macros = 'GET POST PUT DELETE HEAD ANY ns';
+    var funcs  = 'html page-not-found run-server';
 
     this.regexList = [
         { regex: /;(.*)$/gm,

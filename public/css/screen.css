@@ -80,10 +80,17 @@ ul#tabs li.current a {
     border-bottom: 1px solid #454545;
 }
 
-p {
-    margin-bottom: 1em;
-    font-size: 10.5pt;
+#content p {
+    margin-bottom: 0.5em;
+    font-size: 10pt;
     clear: both;
     padding-top: 0px;
     padding-left: 15px;
+    line-height: 130%;
+    width: 42em;
+    text-align: left;
+}
+
+#content a {
+    color: #ffffff;
 }
