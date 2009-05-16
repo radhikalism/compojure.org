@@ -59,53 +59,24 @@ ul#tabs li.current {
     padding-top: 4px;
 }
 
-h2 {
-    color: #eeeeee;
-    font-size: 14pt;
-    font-family: tahoma, geneva, sans-serif;
-    margin-top: 2pt;
-    margin-bottom: 8pt;
-}
-
-h2#title {
+#content h1 {
     color: #ffffff;
     background-color: #323232;
     background: url(../img/sub-header-bg.png);
+    font-family: tahoma, geneva, sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
     height: 32px;
     margin-top: 0px; 
+    margin-bottom: 8pt;
     padding: 39px 12px 0 12px;
     border-bottom: 1px solid #454545;
 }
 
 p {
     margin-bottom: 1em;
-}
-
-#content {
     font-size: 10.5pt;
     clear: both;
     padding-top: 0px;
     padding-left: 15px;
-}
-
-#content ul {
-    list-style-type: disc;
-    padding-left: 10pt;
-}
-
-#content ul li {
-    margin: 2pt;
-}
-
-ul#about {
-    list-style-type: none;
-    font-size: 12pt;
-    margin-left: 15pt;
-    letter-spacing: 0.2pt;
-}
-
-ul#about li {
-    line-height: 24px;
 }

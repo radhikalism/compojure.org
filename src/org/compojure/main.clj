@@ -27,7 +27,7 @@
       [:body
         header
         tabs
-        body]]))
+        [:div#content body]]]))
 
 (def description
   (list
@@ -46,10 +46,9 @@
 
 (def index
   (site-page "Compojure"
-    [:h2#title "A Clojure web framework"]
-    [:div#content
-      description
-      (source-code example-code)]))
+    [:h1 "A Clojure web framework"]
+    description
+    (source-code example-code)))
 
 (defroutes root
   (GET "/"
