@@ -9,6 +9,7 @@
 (ns org.compojure.page
   "Library for displaying markdown pages."
   (:use compojure.html.page-helpers)
+  (:use compojure.str-utils)
   (:use clojure.contrib.java-utils)
   (:use clojure.contrib.str-utils)
   (:import com.petebevin.markdown.MarkdownProcessor))
@@ -36,7 +37,7 @@
   (for [page (list-top-level)]
     (let [page (.replace page ".md" "")
           uri  (str "/" page)
-          tab  (link-to uri page)]
+          tab  (link-to uri (capitalize page))]
       (if (= page current-page)
         [:li.current tab]
         [:li tab]))))
