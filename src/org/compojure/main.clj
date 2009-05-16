@@ -17,7 +17,7 @@
         [:title title]]
       [:body
         [:div#header [:h1 [:span "Compojure"]]]
-        [:ul#tabs (get-tabs "home")]
+        [:ul#tabs (render-tabs "home")]
         [:div#content body]]]))
 
 (def description
@@ -36,10 +36,7 @@
   [:pre {:class "code brush:clojure"} src])
 
 (def index
-  (site-page "Compojure"
-    [:h1 "A Clojure web framework"]
-    description
-    (source-code example-code)))
+  (site-page "Compojure" (render-page "home")))
 
 (defroutes root
   (GET "/"

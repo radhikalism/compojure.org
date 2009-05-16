@@ -31,7 +31,7 @@
          (.isDirectory (file %)))
      (.list (file pages-dir))))
 
-(defn get-tabs
+(defn render-tabs
   "Return a list of page tabs."
   [current-page]
   (for [page (list-top-level)]
@@ -41,3 +41,9 @@
       (if (= page current-page)
         [:li.current tab]
         [:li tab]))))
+
+(defn render-page
+  "Render a page."
+  [page]
+  (markdown
+    (slurp (str pages-dir "/" page ".md"))))
