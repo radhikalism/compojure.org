@@ -10,6 +10,7 @@
   "Library for displaying markdown pages."
   (:use compojure.html.page-helpers)
   (:use compojure.str-utils)
+  (:use clojure.contrib.duck-streams)
   (:use clojure.contrib.java-utils)
   (:use clojure.contrib.str-utils)
   (:import com.petebevin.markdown.MarkdownProcessor))
@@ -27,8 +28,7 @@
   "List top level pages."
   []
   (filter
-    #(or (.endsWith % ".md")
-         (.isDirectory (file %)))
+    #(.endsWith % ".md")
      (.list (file pages-dir))))
 
 (defn render-tabs
@@ -42,8 +42,12 @@
         [:li.current tab]
         [:li tab]))))
 
+(defn page-path
+  "Return the internal path to a page file."
+  [page]
+  (file pages-dir (str page ".md")))
+
 (defn render-page
   "Render a page."
   [page]
-  (markdown
-    (slurp (str pages-dir "/" page ".md"))))
+  (markdown (slurp* (page-path page))))

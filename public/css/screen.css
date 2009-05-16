@@ -73,10 +73,10 @@ ul#tabs li.current a {
     font-family: tahoma, geneva, sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
-    height: 32px;
+    height: 28px;
     margin-top: 0px; 
     margin-bottom: 8pt;
-    padding: 39px 12px 0 12px;
+    padding: 35px 12px 0 12px;
     border-bottom: 1px solid #454545;
 }
 
