@@ -47,6 +47,11 @@
   [page]
   (file pages-dir (str page ".md")))
 
+(defn page-exists?
+  "Return true if the page exists, false otherwise."
+  [page]
+  (.exists (page-path page)))
+
 (defn render-page
   "Render a page."
   [page]
