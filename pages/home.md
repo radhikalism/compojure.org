@@ -1,12 +1,13 @@
 # Web Development in Clojure
 
 Compojure is an open source web framework for the
-[Clojure programming language](http://clojure.org).
+[Clojure programming language](http://clojure.org). It is compatible with the
+[Ring](http://github.com/mmcgrana/ring/tree) specification.
 
 Like Clojure, it favours a functional approach, with little to no side-effects.
+Compojure is also designed to be concise, simple and explicit.
 
-Functions are connected to routes via a simple and concise syntax. Here's the
-obligatory "hello&nbsp;world" example:
+Here's a basic "hello&nbsp;world" example:
 
 <pre class="brush:clojure">
 (defroutes greetings
