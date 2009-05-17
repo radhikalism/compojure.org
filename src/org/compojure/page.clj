@@ -27,9 +27,13 @@
 (defn- list-top-level
   "List top level pages."
   []
-  (filter
-    #(.endsWith % ".md")
-     (.list (file pages-dir))))
+  (filter #(.endsWith % ".md")
+           (.list (file pages-dir))))
+
+(defn- get-tab
+  "Get the page for the tab."
+  [page]
+  (first (re-split #"/" page)))
 
 (defn render-tabs
   "Return a list of page tabs."
@@ -38,7 +42,7 @@
     (let [page (.replace page ".md" "")
           uri  (str "/" page)
           tab  (link-to uri (capitalize page))]
-      (if (= page current-page)
+      (if (= (get-tab page) (get-tab current-page))
         [:li.current tab]
         [:li tab]))))
 

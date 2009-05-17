@@ -95,6 +95,10 @@ a {
     color: #ffffff;
 }
 
+em {
+    font-style: italic;
+}
+
 h2 {
     padding-left: 15px;
     font-size: 11pt;
