@@ -7,4 +7,5 @@ Compojure is undocumented, please report it as an
 
 ## Tutorials
 
-Routes From The Bottom Up
+* [Routes From The Bottom Up](/documentation/routes-from-the-bottom-up)
+* Generating HTML
