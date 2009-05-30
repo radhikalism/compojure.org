@@ -17,6 +17,6 @@ Here's a basic "hello&nbsp;world" example:
     (page-not-found)))
 </pre>
 
-More examples of Compojure syntax can be found in the
-[documentation](/documentation), or you can grab the latest Compojure
-builds from the [download](/download) section.
+More examples of Compojure syntax can be found in the [documentation](/docs),
+or you can grab the latest Compojure builds from builds from the
+[download](/download) section.
