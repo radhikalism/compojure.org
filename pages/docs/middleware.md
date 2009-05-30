@@ -46,8 +46,7 @@ middleware function can be written in a few lines of Clojure:
 This middleware adds a custom header to the response.
 
 Note that by convention, the first argument of Compojure middleware is always
-the handler. This is required for your middleware to work with the `decorate`
-macro:
+the handler. This is required for your middleware to work with `decorate`:
 
 <pre class="brush:clojure">
 (decorate your-handler

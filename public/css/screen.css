@@ -87,7 +87,7 @@ p {
     clear: both;
     padding-left: 15px;
     line-height: 125%;
-    width: 56em;
+    max-width: 56em;
     text-align: left;
 }
 

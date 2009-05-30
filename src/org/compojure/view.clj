@@ -23,6 +23,14 @@
   (for [script scripts]
     (include-js (str "/js/" script ".js"))))
 
+(defn tab
+  "Render a header tab."
+  [page uri text]
+  (let [link (link-to uri text)]
+    (if (= (top-path uri) (top-path page))
+      [:li.current link]
+      [:li link])))
+
 (defn show-page [page]
   (html
     [:html
@@ -33,5 +41,7 @@
         [:title "compojure/" page]]
       [:body
         [:div#header  [:h1 [:span "Compojure"]]]
-        [:ul#tabs     (render-tabs page)]
+        [:ul#tabs
+          (tab page "/about" "About")
+          (tab page "/docs"  "Documentation")]
         [:div#content (render-page page)]]]))

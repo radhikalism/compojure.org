@@ -24,27 +24,10 @@
   [text]
   (.markdown markdown-processor text))
 
-(defn- list-top-level
-  "List top level pages."
-  []
-  (filter #(.endsWith % ".md")
-           (.list (file pages-dir))))
-
-(defn- get-tab
-  "Get the page for the tab."
-  [page]
-  (first (re-split #"/" page)))
-
-(defn render-tabs
-  "Return a list of page tabs."
-  [current-page]
-  (for [page (list-top-level)]
-    (let [page (.replace page ".md" "")
-          uri  (str "/" page)
-          tab  (link-to uri (capitalize page))]
-      (if (= (get-tab page) (get-tab current-page))
-        [:li.current tab]
-        [:li tab]))))
+(defn top-path
+  "Get the top-level path of the URI."
+  [uri]
+  (second (re-find #"^/?(\w+)" uri)))
 
 (defn page-path
   "Return the internal path to a page file."
