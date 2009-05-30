@@ -1,10 +1,11 @@
 SyntaxHighlighter.brushes.Clojure = function() {
-    var defs   = 'defroutes'
-    var macros = 'GET POST PUT DELETE HEAD ANY ns';
-    var funcs  = 'html page-not-found run-server';
+    var defs   = 'def defn defroutes decorate'
+    var macros = 'GET POST PUT DELETE HEAD ANY ns fn let';
+    var funcs  = 'html page-not-found run-server assoc-in with-multipart ' +
+                 'with-session';
 
     this.regexList = [
-        { regex: /;(.*)$/gm,
+        { regex: /\s;(.*)$/gm,
           css: 'comment' },
         { regex: /[\(\)]/gm,
           css: 'list' },

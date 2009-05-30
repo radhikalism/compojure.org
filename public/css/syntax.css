@@ -1,7 +1,17 @@
-pre, .syntaxhighlighter {
+code, pre, .syntaxhighlighter {
 	font-family: "lucida console", monaco, monospace;
     font-size: 9pt;
+}
+
+pre, .syntaxhighlighter {
     line-height: 125%;
+}
+
+code {
+    background: #222222;
+    padding: 1px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
 }
 
 pre {

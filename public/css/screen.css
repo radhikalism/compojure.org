@@ -108,6 +108,10 @@ h2 {
     margin-bottom: 0.5em;
 }
 
+img.diagram {
+    margin: 1em;
+}
+
 #content ul li {
     background: url(../img/bullet.png) no-repeat 0px 3px;
     margin: 0.5em 0em 0.5em 1.5em;
