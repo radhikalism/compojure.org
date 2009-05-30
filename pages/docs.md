@@ -5,9 +5,22 @@ priorities. If a particular piece of documentation is unclear, or if a piece of
 Compojure is undocumented, please report it as an
 [issue](http://github.com/weavejester/compojure.org/issues).
 
+## Tutorials
+
+* [Getting started](/docs/getting-started)
+* [Build a blog](/docs/build-a-blog)
+
 ## Topics
 
-* [Request map](/docs/request-map)
-* [Response map](/docs/response-map)
+* [Requests](/docs/requests)
+* [Responses](/docs/responses)
 * [Handlers](/docs/handlers)
 * [Middleware](/docs/middleware)
+* [Routes](/docs/routes)
+* [HTML](/docs/html)
+* [Forms](/docs/forms)
+* [Validation](/docs/validation)
+
+## References
+
+* [API reference](/docs/api)
