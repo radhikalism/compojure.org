@@ -1,6 +1,6 @@
 SyntaxHighlighter.brushes.Clojure = function() {
     var defs   = 'def defn defroutes decorate'
-    var macros = 'GET POST PUT DELETE HEAD ANY ns fn let';
+    var macros = 'GET POST PUT DELETE HEAD ANY ns fn let if and';
     var funcs  = 'html page-not-found run-server assoc-in with-multipart ' +
                  'with-session';
 
