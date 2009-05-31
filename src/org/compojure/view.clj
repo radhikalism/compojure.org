@@ -42,6 +42,9 @@
       [:body
         [:div#header  [:h1 [:span "Compojure"]]]
         [:ul#tabs
-          (tab page "/about" "About")
-          (tab page "/docs"  "Documentation")]
+          (tab page "/about"     "About")
+          (tab page "/docs"      "Documentation")
+          (tab page "/download"  "Download")
+          (tab page "/community" "Community")
+          (tab page "/dev"       "Contributing")]
         [:div#content (render-page page)]]]))

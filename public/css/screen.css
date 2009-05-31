@@ -82,12 +82,15 @@ ul#tabs li.current a {
     border-bottom: 1px solid #454545;
 }
 
+#content p, dt, dd, li {
+    max-width: 56em;
+}
+
 p {
     margin-bottom: 0.8em;
     clear: both;
     padding-left: 15px;
     line-height: 125%;
-    max-width: 56em;
     text-align: left;
 }
 

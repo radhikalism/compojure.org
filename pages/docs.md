@@ -1,6 +1,6 @@
 # Documentation
 
-Compojure is a very young framework, but good documentation is one of the
+Compojure is a very young framework, but good documentation is one of the top
 priorities. If a particular piece of documentation is unclear, or if a piece of
 Compojure is undocumented, please report it as an
 [issue](http://github.com/weavejester/compojure.org/issues).
