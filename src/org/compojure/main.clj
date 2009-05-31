@@ -15,7 +15,7 @@
 
 (defroutes root
   (GET "/"
-    (show-page "home"))
+    (show-page "about"))
   (GET "/*"
     (if (page-exists? (params :*))
       (show-page (params :*))
