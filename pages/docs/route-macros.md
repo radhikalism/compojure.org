@@ -1,8 +1,11 @@
 # Route macros
 
-However, the above example is a very verbose way of defining a route. Compojure
-provides a very powerful syntax that enables routes to be defined clearly and
-concisely. A more idiomatic way of writing the above function is:
+Route macros provide a concise and powerful syntax for defining
+[routes](/docs/routes). 
+
+Here is an example of a route defined using the `GET` macro. This route will
+return a page with "Hello World" on it, if the request method is GET and the
+URI is "/".
 
 <pre class="brush:clojure">
 (GET "/" "Hello World")
@@ -14,9 +17,9 @@ macro for each of the common HTTP methods (`GET`, `POST`, `PUT`, `DELETE` and
 
 ## Path templates
 
-The first argument of these macros is the path template. This matches against
-the HTTP request URI. The path template can include parameters, which are
-identifiers denoted by a beginning ":".
+The path template is the first argument of all these macros. This matches against
+the request URI. The path template can include parameters, which are identifiers
+denoted by a beginning ":".
 
 A parameter will match a string of any character apart from "/", ".", "," ";"
 and "?". The matched value is stored in a map the `:route-params` key in the
@@ -140,3 +143,5 @@ Some examples of usage:
 (GET "/map-example"
   {:body "Hello World"})
 </pre>
+
+

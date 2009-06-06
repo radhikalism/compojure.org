@@ -24,7 +24,7 @@
     (or (serve-file (params :*))
         :next))
   (ANY "*"
-    (page-not-found)))
+    [404 (show-page "404")]))
 
 (defn run []
   (run-server {:port 8080}
