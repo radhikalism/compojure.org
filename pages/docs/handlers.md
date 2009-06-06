@@ -19,13 +19,15 @@ that outputs "hello world" in response to any request:
    :body    "Hello World"})
 </pre>
 
-However, in practise, you'd rarely write a handler like this. Compojure
-provides a powerful [routes syntax](/docs/routes) that allows complex handlers
-to be built in a clear and concise fashion.
+However, in practise, you'd rarely write a handler like this. Handlers are
+usually built up out of a number of [routes](/docs/routes) defined using the
+[route macro](/docs/route-macros) syntax.
 
-The idiomatic way of writing the above handler in Compojure is:
+Once a handler is written, it can be turned into a Java servlet object using
+the `servlet` inline function. It can then be attached to a
+[server](/docs/servers):
 
 <pre class="brush:clojure">
-(defroutes hello-world
-  (ANY "*" "Hello World"))
+(run-server {:port 8080}
+  "/*" (servlet hello-world))
 </pre>
