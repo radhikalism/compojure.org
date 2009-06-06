@@ -116,32 +116,44 @@ following classes are used:
   <dd>The map is intelligently merged into the response map.</dd>
 
   <dt><code>clojure.lang.Fn</code></dt>
-  <dd>The request and response maps are passed to the function as arguments,
-  and the return value of the function is used to determine the response.</dd>
+  <dd>The function is treated as a route. In other words, it expects a request
+  argument and returns a value that is merged with the response map.</dd>
 
   <dt><code>clojure.lang.IPersistentVector</code></dt>
   <dd>Each element in the vector is used to update the response.</dd>
 </dl>
 
-Some examples of usage:
+Some example routes:
 
 <pre class="brush:clojure">
-(GET "/"
-  "Index page")
-
-(ANY "*"
-  [404 "Page Not Found"])
-
-(GET "/image"
-  (File. "./public/image.png"))
-
-(GET "/new-product"
-  (if product-released?
-    "Our product is amazing"
-    :next))
-
-(GET "/map-example"
-  {:body "Hello World"})
+(defroutes example-routes
+  (GET "/"
+    "Index page")
+  (GET "/image"
+    (file "public/image.png"))
+  (GET "/new-product"
+    (if product-released?
+      "Our product is amazing"
+      :next))
+  (GET "/map-example"
+    {:body "Hello World"})
+  (ANY "*"
+    [404 "Page Not Found"]))
 </pre>
 
+## Local bindings
 
+The final useful piece of functionality the route syntax provides is a small
+set of useful local bindings:
+
+<pre class="brush:clojure">
+  params  => (:params request)
+  cookies => (:cookies request)
+  session => (:session request)
+  flash   => (:flash request)
+</pre>
+
+The `:params` key and the associated params binding provides a merged map of
+all parameters from the request. This includes the contents of `:route-params`
+ (when a map), and the parameters added by the `with-params` and
+`with-multipart` [middleware](/docs/middleware). 
