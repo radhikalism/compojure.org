@@ -33,6 +33,7 @@
 
 (defn show-page [page]
   (html
+    (doctype :html4)
     [:html
       [:head
         (styles  'reset 'screen 'shCore 'syntax)
