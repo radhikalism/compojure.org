@@ -126,19 +126,22 @@ following classes are used:
 Some example routes:
 
 <pre class="brush:clojure">
-(defroutes example-routes
-  (GET "/"
-    "Index page")
-  (GET "/image"
-    (file "public/image.png"))
-  (GET "/new-product"
-    (if product-released?
-      "Our product is amazing"
-      :next))
-  (GET "/map-example"
-    {:body "Hello World"})
-  (ANY "*"
-    [404 "Page Not Found"]))
+(GET "/"
+  "Index page")
+
+(GET "/image"
+  (file "public/image.png"))
+
+(GET "/new-product"
+  (if product-released?
+    "Our product is amazing"
+    :next))
+
+(GET "/map-example"
+  {:body "Hello World"})
+
+(ANY "*"
+  [404 "Page Not Found"]))
 </pre>
 
 ## Local bindings
