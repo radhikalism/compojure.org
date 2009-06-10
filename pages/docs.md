@@ -19,6 +19,7 @@ Compojure is undocumented, please report it as an
 * [Middleware](/docs/middleware)
 * [Routes](/docs/routes)
 * [Route macros](/docs/route-macros)
+* [Sessions](/docs/sessions)
 * [HTML](/docs/html)
 * [Forms](/docs/forms)
 * [Validation](/docs/validation)
