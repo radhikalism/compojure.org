@@ -15,6 +15,10 @@ The `GET` macro is part of a family of macros for defining routes. There is one
 macro for each of the common HTTP methods (`GET`, `POST`, `PUT`, `DELETE` and
 `HEAD`). Additionally, there is `ANY`, which matches any HTTP method.
 
+If there is a form parameter called `_method`, this will be used instead of the
+method of the HTTP request. This allows HTML forms to submit PUT and DELETE
+requests.
+
 ## Path templates
 
 The path template is the first argument of all these macros. This matches against
