@@ -30,16 +30,20 @@
   (second (re-find #"^/?(\w+)" uri)))
 
 (defn page-path
-  "Return the internal path to a page file."
-  [page]
-  (file pages-dir (str page ".md")))
+  "Return the internal path to a page file, nil if it doesn't exists."
+  [page ext]
+  (let [f (file pages-dir (str page "." ext))]
+    (when (.exists f) f)))
 
 (defn page-exists?
   "Return true if the page exists, false otherwise."
   [page]
-  (.exists (page-path page)))
+  (or (page-path page "md")
+      (page-path page "html")))
 
 (defn render-page
-  "Render a page."
+  "Render a page. Look for Markdown page first, else check for HTML."
   [page]
-  (markdown (slurp* (page-path page))))
+  (if-let [page-md (page-path page "md")]
+    (markdown (slurp* page-md))
+    (slurp* (page-path page "html"))))
