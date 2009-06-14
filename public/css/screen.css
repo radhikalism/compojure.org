@@ -102,9 +102,10 @@ em {
     font-style: italic;
 }
 
+
 h2 {
     padding-left: 15px;
-    font-size: 11pt;
+    font-size: 12pt;
     font-family: tahoma, geneva, sans-serif;
     font-weight: bold;
     margin-top: 1.3em;
@@ -143,4 +144,37 @@ dl dd {
 .keys dt code {
     color: #66eeaa;
     padding-right: 3px;
+}
+
+#api h2 {
+    font-family: arial;
+    font-size: 16pt;
+    margin: 1em 0 1em 0.5em;
+}
+
+#api h3 {
+    padding-left: 30px;
+    font-size: 10pt;
+    font-family: tahoma, geneva, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+#api h4 {
+    padding-left: 30px;
+    font-size: 10pt;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+#api p {
+    margin: 0.5em 0 1.5em;
+    padding-left: 35px;
+}
+
+#api hr {
+    margin-bottom: 1em;
+    margin-left: 40px;
+    width: 80%;
 }

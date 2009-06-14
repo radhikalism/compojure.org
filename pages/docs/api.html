@@ -1,0 +1,635 @@
+<h1>API</h1>
+
+<p>This is documentation for all of Compojure's functions and macros, arranged alphabetically within namespace.</p>
+<div id="api">
+<h2>compojure.control</h2>
+<hr />
+
+<h3>(decorate func & decorators)</h3>
+<h4>Macro</h4>
+<p>Wrap a function in one or more decorators.</p>
+<hr />
+
+<h3>(decorate-bind decorator funcs & body)</h3>
+<h4>Macro</h4>
+<p>Wrap named functions in a decorator for a bounded scope.</p>
+<hr />
+
+<h3>(decorate-with decorator & funcs)</h3>
+<h4>Macro</h4>
+<p>Wrap multiple functions in a decorator.</p>
+<hr />
+
+<h3>(deftmpl name doc? & body)</h3>
+<h4>Macro</h4>
+<p>Define a template function. Arguments are passed via key-value pairs.  e.g. (deftmpl foo [bar baz] (+ bar baz))       (foo :bar 1 :baz 2)</p>
+<hr />
+
+<h3>(domap [item list] & body)</h3>
+<h4>Macro</h4>
+<p>Similar to doseq, but collects the results into a sequence.</p>
+<hr />
+
+<h3>(maybe f x & xs)</h3>
+<h4>Macro</h4>
+<p>Returns (f x & xs) if x is not nil, otherwise returns nil.</p>
+<hr />
+
+<h3>(redef name value)</h3>
+<h4>Macro</h4>
+<p>Redefine an existing value, keeping the metadata intact.</p>
+<hr />
+
+<h3>(return x & body)</h3>
+<h4>Macro</h4>
+<p>A do block that will always return the argument 'x'.</p>
+<h2>compojure.crypto</h2>
+<hr />
+
+<h3>(gen-uuid )</h3>
+<p>Generate a random UUID.</p>
+<hr />
+
+<h3>(hmac key algorithm data)</h3>
+<p>Generate a hashed message authentication code with the supplied key and  algorithm on some string data.</p>
+<h2>compojure.encodings</h2>
+<hr />
+
+<h3>(base64-decode encoded)</h3>
+<p>Decode a string using base64.</p>
+<hr />
+
+<h3>(base64-encode-bytes unencoded)</h3>
+<p>Encode an array of bytes into a base64 encoded string.</p>
+<hr />
+
+<h3>(marshal data)</h3>
+<p>Serialize a Clojure object in a base64-encoded string.</p>
+<hr />
+
+<h3>(unmarshal marshaled)</h3>
+<p>Unserialize a Clojure object from a base64-encoded string.</p>
+<hr />
+
+<h3>(urldecode s)</h3>
+<p>Decode a urlencoded string using the default encoding.</p>
+<hr />
+
+<h3>(urlencode s)</h3>
+<p>Encode a urlencoded string using the default encoding.</p>
+<h2>compojure.html.form-helpers</h2>
+<hr />
+
+<h3>*params*</h3>
+<p>Parameter map var that form input field functions use to populate their  default values.</p>
+<hr />
+
+<h3>(check-box name)</h3>
+<h3>(check-box name checked?)</h3>
+<h3>(check-box name checked? value)</h3>
+<p>Creates a check box.</p>
+<hr />
+
+<h3>(decorate-fields decorator & body)</h3>
+<h4>Macro</h4>
+<p>Wrap all input field functions in a decorator.</p>
+<hr />
+
+<h3>(drop-down name options)</h3>
+<h3>(drop-down name options selected)</h3>
+<p>Creates a drop-down box using the 'select' tag.</p>
+<hr />
+
+<h3>(file-upload name)</h3>
+<p>Creates a file upload input.</p>
+<hr />
+
+<h3>(form-to [method action] & body)</h3>
+<p>Create a form that points to a particular method and route.  e.g. (form-to [:put "/post"]         ...)</p>
+<hr />
+
+<h3>(hidden-field name)</h3>
+<h3>(hidden-field name value)</h3>
+<p>Creates a hidden input field.</p>
+<hr />
+
+<h3>(label name text)</h3>
+<p>Create a label for an input field with the supplied name.</p>
+<hr />
+
+<h3>(password-field name)</h3>
+<p>Creates a password input field.</p>
+<hr />
+
+<h3>(reset-button text)</h3>
+<p>Create a form reset button.</p>
+<hr />
+
+<h3>(select-options options)</h3>
+<h3>(select-options options selected)</h3>
+<p>Turn a collection into a set of option tags.</p>
+<hr />
+
+<h3>(submit-button text)</h3>
+<p>Create a submit button.</p>
+<hr />
+
+<h3>(text-area name)</h3>
+<h3>(text-area name value)</h3>
+<p>Creates a text area element.</p>
+<hr />
+
+<h3>(text-field name)</h3>
+<h3>(text-field name value)</h3>
+<p>Creates a text input field.</p>
+<hr />
+
+<h3>(with-params params & body)</h3>
+<h4>Macro</h4>
+<p>Bind a map of params to *params*.</p>
+<h2>compojure.html.gen</h2>
+<hr />
+
+<h3>(escape-html string)</h3>
+<p>Change special characters into HTML character entities.</p>
+<hr />
+
+<h3>(explicit-ending-tag? tag)</h3>
+<p>Returns true if tag needs an explicit ending tag, even if the body of the  tag is empty.</p>
+<hr />
+
+<h3>h</h3>
+<p>Shortcut for escape-html</p>
+<hr />
+
+<h3>(html & trees)</h3>
+<p>Format trees of vectors into a string of HTML.</p>
+<hr />
+
+<h3>(html-tree tree)</h3>
+<p>Turns a tree of vectors into a string of HTML. Any sequences in the  tree are expanded out.</p>
+<hr />
+
+<h3>(optional-attrs func)</h3>
+<p>Adds an optional attribute map to the supplied function's arguments.</p>
+<h2>compojure.html.page-helpers</h2>
+<hr />
+
+<h3>(include-css & styles)</h3>
+<p>Include a list of external stylesheet files.</p>
+<hr />
+
+<h3>(include-js & scripts)</h3>
+<p>Include a list of external javascript files.</p>
+<hr />
+
+<h3>(javascript-tag script)</h3>
+<p>Wrap the supplied javascript up in script tags and a CDATA section.</p>
+<hr />
+
+<h3>(link-to url & content)</h3>
+<p>Wraps some content in a HTML hyperlink with the supplied URL.</p>
+<hr />
+
+<h3>(ordered-list coll)</h3>
+<p>Wrap a collection in an unordered list</p>
+<hr />
+
+<h3>(unordered-list coll)</h3>
+<p>Wrap a collection in an unordered list</p>
+<hr />
+
+<h3>(url-encode string-or-map)</h3>
+<p>Encodes a single string or sequence of key/value pairs.</p>
+<hr />
+
+<h3>(url-params address param-map)</h3>
+<p>Encodes a map of parameters and adds them onto the end of an existing  address.  e.g. (url-params "http://example.com" {:lang "en", :offset 10})       => "http://example.com?lang=en&offset=10"</p>
+<hr />
+
+<h3>(xhtml-tag lang & contents)</h3>
+<p>Create an XHTML tag for the specified locale.   e.g. (xhtml "en"          [:head ...]          [:body ...])</p>
+<h2>compojure.http.helpers</h2>
+<hr />
+
+<h3>(content-type type)</h3>
+<p>Retuns a Content-Type header given a type string.</p>
+<hr />
+
+<h3>(header-option [k v])</h3>
+<p>Converts a header option KeyValue into a string.</p>
+<hr />
+
+<h3>(header-options m delim)</h3>
+<p>Converts a map into an HTTP header options string.</p>
+<hr />
+
+<h3>(page-not-found )</h3>
+<h3>(page-not-found filename)</h3>
+<p>A shortcut to create a '404 Not Found' HTTP response.</p>
+<hr />
+
+<h3>(redirect-to location)</h3>
+<p>A shortcut for a '302 Moved' HTTP redirect.</p>
+<hr />
+
+<h3>(serve-file path)</h3>
+<h3>(serve-file root path)</h3>
+<p>Attempts to serve up a static file from a directory, which defaults to  './public'. Nil is returned if the file does not exist. If the file is a  directory, the function looks for a file in the directory called 'index.*'.</p>
+<hr />
+
+<h3>(set-cookie name value)</h3>
+<h3>(set-cookie name value & attrs)</h3>
+<p>Return a Set-Cookie header.</p>
+<hr />
+
+<h3>(with-cache-control handler m)</h3>
+<p>Middleware to set the Cache-Control http header.    Map entries with boolean values either write their    key's (name) if true, or nothing if false.    Example:    (... {:max-age 3600 :public false :must-revalidate true})    Cache-Control: max-age=3600, must-revalidate</p>
+<hr />
+
+<h3>(with-headers handler headers)</h3>
+<p>Merges a map of header name and values into the response.   Will not overwrite existing headers.</p>
+<h2>compojure.http.multipart</h2>
+<hr />
+
+<h3>(get-multipart-params request)</h3>
+<p>Retrieve multipart params from the request.</p>
+<hr />
+
+<h3>(multipart-form? request)</h3>
+<p>Does a request have a multipart form?</p>
+<hr />
+
+<h3>(parse-multipart-params request)</h3>
+<p>Parse a map of multipart parameters from the request.</p>
+<hr />
+
+<h3>(with-multipart handler)</h3>
+<p>Decorate a Ring handler with multipart parameters.</p>
+<h2>compojure.http.request</h2>
+<hr />
+
+<h3>(assoc-cookies request)</h3>
+<p>Associate cookies with a request map.</p>
+<hr />
+
+<h3>(assoc-params request)</h3>
+<p>Associate urlencoded parameters with a request. The following keys are added  to the request map: :query-params, :form-params and :params.</p>
+<hr />
+
+<h3>(get-character-encoding request)</h3>
+<p>Get the character encoding, or use the default from duck-streams.</p>
+<hr />
+
+<h3>(parse-cookies request)</h3>
+<p>Pull out a map of cookies from a request map.</p>
+<hr />
+
+<h3>(parse-form-params request)</h3>
+<p>Parse urlencoded form parameters from the request body.</p>
+<hr />
+
+<h3>(parse-query-params request)</h3>
+<p>Parse parameters from the query string.</p>
+<hr />
+
+<h3>(urlencoded-form? request)</h3>
+<p>Does a request have a urlencoded form?</p>
+<hr />
+
+<h3>(with-cookies handler)</h3>
+<p>Decorator that adds cookies to a request map.</p>
+<hr />
+
+<h3>(with-params handler)</h3>
+<p>Decorator that adds urlencoded parameters to the request map.</p>
+<h2>compojure.http.response</h2>
+<hr />
+
+<h3>(create-response request x)</h3>
+<p>Create a new response map from an update object, x.</p>
+<hr />
+
+<h3>default-response</h3>
+<p>Default HTTP response map.</p>
+<hr />
+
+<h3>update-response</h3>
+<p>Update a response with an object. The type of object determines how the  response is updated.</p>
+<h2>compojure.http.routes</h2>
+<hr />
+
+<h3>(ANY path & body)</h3>
+<h4>Macro</h4>
+<p>Generate a route that matches any method.</p>
+<hr />
+
+<h3>(DELETE path & body)</h3>
+<h4>Macro</h4>
+<p>Generate a DELETE route.</p>
+<hr />
+
+<h3>(GET path & body)</h3>
+<h4>Macro</h4>
+<p>Generate a GET route.</p>
+<hr />
+
+<h3>(HEAD path & body)</h3>
+<h4>Macro</h4>
+<p>Generate a HEAD route.</p>
+<hr />
+
+<h3>(POST path & body)</h3>
+<h4>Macro</h4>
+<p>Generate a POST route.</p>
+<hr />
+
+<h3>(PUT path & body)</h3>
+<h4>Macro</h4>
+<p>Generate a PUT route.</p>
+<hr />
+
+<h3>(absolute-url? s)</h3>
+<p>True if the string is an absolute URL.</p>
+<hr />
+
+<h3>(assoc-route-params request params)</h3>
+<p>Associate route parameters with the request map.</p>
+<hr />
+
+<h3>compile-matcher</h3>
+<p>Compile a string or regex into a form suitable for buing passed to the  match-uri function.</p>
+<hr />
+
+<h3>(compile-route method path body)</h3>
+<p>Compile a route in the form (method path & body) into a function.</p>
+<hr />
+
+<h3>(compile-uri-matcher path)</h3>
+<p>Compile a path string using the routes syntax into a uri-matcher struct.</p>
+<hr />
+
+<h3>(defroutes name doc-or-route & routes)</h3>
+<h4>Macro</h4>
+<p>Create a Ring handler function from a sequence of routes.</p>
+<hr />
+
+<h3>(get-matcher-uri path request)</h3>
+<p>Get the appropriate request URI for the given path pattern.</p>
+<hr />
+
+<h3>(match-form-method route-method form-method request-method)</h3>
+<p>True if the route-method matches a posted forms _method parameter.</p>
+<hr />
+
+<h3>(match-method route-method request)</h3>
+<p>True if this request matches the route-method.</p>
+<hr />
+
+<h3>(match-route-method route-method request-method)</h3>
+<p>True if the method from the route matches the method from the request.</p>
+<hr />
+
+<h3>match-uri</h3>
+<p>Match a URL against a compiled URI-matcher or a regular expression. Returns  the matched URI keywords as a map, or the matched regex groups as a vector.</p>
+<hr />
+
+<h3>(request-matcher method path)</h3>
+<h4>Macro</h4>
+<p>Compiles a function to match a HTTP request against the supplied method  and path template. Returns a map of the route parameters if the is a match,  nil otherwise. Precompiles the route when supplied with a literal string.</p>
+<hr />
+
+<h3>(request-url request)</h3>
+<p>Return the complete URL for the request.</p>
+<hr />
+
+<h3>(routes & handlers)</h3>
+<p>Create a Ring handler by combining several routes into one. Adds parameters  and cookies to the request.</p>
+<hr />
+
+<h3>(routes* & handlers)</h3>
+<p>Create a Ring handler by combining several handlers into one.</p>
+<hr />
+
+<h3>(with-request-bindings request & body)</h3>
+<h4>Macro</h4>
+<p>Add shortcut bindings for the keys in a request map.</p>
+<h2>compojure.http.servlet</h2>
+<hr />
+
+<h3>(create-request request servlet)</h3>
+<p>Create the request map from the HttpServletRequest object.</p>
+<hr />
+
+<h3>(defservice routes)</h3>
+<h3>(defservice prefix routes)</h3>
+<h4>Macro</h4>
+<p>Defines a service method with an optional prefix suitable for being used by  genclass to compile a HttpServlet class.  e.g. (defservice my-routes)       (defservice "my-prefix-" my-routes)</p>
+<hr />
+
+<h3>(request-handler [servlet request response] routes)</h3>
+<p>Handle incoming HTTP requests from a servlet.</p>
+<hr />
+
+<h3>(servlet routes)</h3>
+<p>Create a servlet from a sequence of routes. Automatically updates if  the routes binding is redefined.</p>
+<hr />
+
+<h3>(update-servlet-response response {:keys [status headers body]})</h3>
+<p>Update the HttpServletResponse using a response map.</p>
+<h2>compojure.http.session</h2>
+<hr />
+
+<h3>(alter-session func & args)</h3>
+<p>Use a function to alter the session.</p>
+<hr />
+
+<h3>create-session</h3>
+<p>Create a new session map. Should not attempt to save the session.</p>
+<hr />
+
+<h3>destroy-session</h3>
+<p>Remove the session from the session store.</p>
+<hr />
+
+<h3>(flash-assoc & keyvals)</h3>
+<p>Associate key value pairs with the session flash.</p>
+<hr />
+
+<h3>read-session</h3>
+<p>Read in the session using the supplied data. Usually the data is a key used  to find the session in a store.</p>
+<hr />
+
+<h3>(session-assoc & keyvals)</h3>
+<p>Associate key value pairs with the session.</p>
+<hr />
+
+<h3>session-cookie</h3>
+<p>Return the session data to be stored in the cookie. This is usually the  session ID.</p>
+<hr />
+
+<h3>(session-dissoc & keys)</h3>
+<p>Dissociate keys from the session.</p>
+<hr />
+
+<h3>(session-hmac cookie-data)</h3>
+<p>Calculate a HMAC for a marshalled session</p>
+<hr />
+
+<h3>(set-session session)</h3>
+<p>Return a response map with the session set.</p>
+<hr />
+
+<h3>(with-session handler)</h3>
+<h3>(with-session handler session-repo)</h3>
+<p>Wrap a handler in a session of the specified type. Session type defaults to  :memory if not supplied.</p>
+<hr />
+
+<h3>write-session</h3>
+<p>Write a new or existing session to the session store.</p>
+<h2>compojure.map-utils</h2>
+<hr />
+
+<h3>(assoc-vec map key val)</h3>
+<p>Associate a key with a value. If the key already exists in the map, create a  vector of values.</p>
+<h2>compojure.ns-utils</h2>
+<hr />
+
+<h3>(immigrate & ns-names)</h3>
+<p>Create a public var in this namespace for each public var in the namespaces named by ns-names. The created vars have the same name, value, and metadata as the original except that their :ns metadata value is this namespace.</p>
+<h2>compojure.server.common</h2>
+<hr />
+
+<h3>(get-host-and-path url-or-path)</h3>
+<p>Splits a path or URL into its hostname and path.</p>
+<hr />
+
+<h3>(server-with-options creator options servlets)</h3>
+<p>Create a new server using the supplied function, options and servlets.</p>
+<h2>compojure.server.jetty</h2>
+<hr />
+
+<h3>(add-servlet! server url-or-path servlet)</h3>
+<p>Add a servlet to a Jetty server. Servlets can be connected to a relative  path or an absolute URL. When connected to a URL, the function will try and  use the hostname to set up a virtual host. Wildcards for the domain and path  are allowed.</p>
+<hr />
+
+<h3>(defserver name & args)</h3>
+<h4>Macro</h4>
+<p>Shortcut for (def name (http-server args))</p>
+<hr />
+
+<h3>(get-context server)</h3>
+<h3>(get-context server host)</h3>
+<p>Get a Context instance for a server and hostname.</p>
+<hr />
+
+<h3>(jetty-server options? & servlets)</h3>
+<p>Create a new Jetty HTTP server with the supplied options and servlets.</p>
+<hr />
+
+<h3>(run-server & server-args)</h3>
+<p>Create and start a new Jetty HTTP server.</p>
+<hr />
+
+<h3>(servlet-holder servlet & params)</h3>
+<p>Wrap a servlet in a ServletHolder object with a supplied set of parameters  to be set on servlet init.</p>
+<hr />
+
+<h3>(start server)</h3>
+<p>Start a HTTP server.</p>
+<hr />
+
+<h3>(stop server)</h3>
+<p>Stop a HTTP server.</p>
+<h2>compojure.str-utils</h2>
+<hr />
+
+<h3>(blank? s)</h3>
+<p>True if s = "" or nil</p>
+<hr />
+
+<h3>(capitalize s)</h3>
+<p>Uppercase the first letter of a string, and lowercase the rest.</p>
+<hr />
+
+<h3>(escape chars string)</h3>
+<p>Returns a string with each occurance of a character in  chars escaped.</p>
+<hr />
+
+<h3>(grep re coll)</h3>
+<p>Filter a collection of strings by a regex.</p>
+<hr />
+
+<h3>(indent text)</h3>
+<h3>(indent text spacer)</h3>
+<p>Indent each line in a string of text. Defaults to an indentation of two  spaces.</p>
+<hr />
+
+<h3>(lines coll)</h3>
+<p>Concatenate a sequence of strings into lines of a single string.</p>
+<hr />
+
+<h3>(map-str func coll)</h3>
+<p>Map a function to a collection, then concatenate the results into a  string.</p>
+<hr />
+
+<h3>(re-escape string)</h3>
+<p>Escape all special regex chars in string.</p>
+<hr />
+
+<h3>(str* & args)</h3>
+<p>A version of str that prefers the names of Named objects.  e.g (str "Hello " :World)  => "Hello :World"      (str* "Hello " :World) => "Hello World"</p>
+<hr />
+
+<h3>(upcase-name sym)</h3>
+<p>Upcase a symbol or keyword's name.</p>
+<h2>compojure.validation</h2>
+<hr />
+
+<h3>*errors*</h3>
+<p>Var containing validation errors.</p>
+<hr />
+
+<h3>(error-class func)</h3>
+<p>Decorator function that marks an input field with an error class if the  parameter has errors.</p>
+<hr />
+
+<h3>(error-summary )</h3>
+<p>Returns a summary of the errors on the form in HTML.</p>
+<hr />
+
+<h3>(merge-errors & results)</h3>
+<p>Merge a set of validation errors into a single hash map.</p>
+<hr />
+
+<h3>(validate params pred message)</h3>
+<h3>(validate params name pred message)</h3>
+<p>Validate a single parameter, or group of parameters, using a predicate. If  the predicate fails, a validation error is returned. For a single parameter,  use the following form:    (validate params name pred message)  This will use the value of (pred (params name)) to determine if the parameter  is valid. For multiple parameters:    (validate params pred message)  This will use the value of (pred params) to determine validity.</p>
+<hr />
+
+<h3>(validation params & validations)</h3>
+<p>Convinience function to perform a series of validations on a map of params.  Takes a set of params and a collection of argument vectors for the validate  function:  e.g. (validation params         [name pred message]         [pred message])  Is the same as:       (merge-errors         (validate params name pred message)         (validate params pred message))</p>
+<hr />
+
+<h3>(validation-errors? )</h3>
+<p>True if there are errors in the var *errors*.</p>
+<hr />
+
+<h3>(with-validated-params params validation-fn & body)</h3>
+<h4>Macro</h4>
+<p>Equivalent to (with-params params (with-validation validation-fn)).</p>
+<hr />
+
+<h3>(with-validation validation-fn & body)</h3>
+<h4>Macro</h4>
+<p>Binds *errors* to (validation-fn *params*).</p>
+<h2>compojure.validation.predicates</h2>
+<hr />
+
+<h3>(max-size n)</h3>
+<p>Returns a function to check a maximum size of a collection.</p>
+<hr />
+
+<h3>(present? x)</h3>
+<p>True if x is not nil and not an empty string.</p>
+</div>
