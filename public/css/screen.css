@@ -145,13 +145,36 @@ dl dd {
     padding-right: 3px;
 }
 
-#api h2 {
-    font-family: arial;
-    font-size: 16pt;
-    margin: 1em 0 1em 0.5em;
+div#toc {
+    background: #414141;
+    clear: right;
+    float: right;
+    padding: 0 20px;
+    width: 30%;
 }
 
-#api h3 {
+div#toc h2 {
+    padding: 0px;
+}
+
+div#toc h3 {
+    font-size: 11pt;
+    margin: 0.5em 0;
+    padding-left: 10px;
+}
+
+div#toc li.toc-entry {
+    margin: 0.3em;
+    padding-left: 20px;
+}
+
+div#api h2 {
+    font-family: arial;
+    font-size: 16pt;
+    margin: 1em 0 0.6em 0.5em;
+}
+
+div#api h3 {
     padding-left: 30px;
     font-size: 10pt;
     font-family: tahoma, geneva, sans-serif;
@@ -160,20 +183,33 @@ dl dd {
     color: white;
 }
 
-#api h4 {
+div#api h4 {
     padding-left: 30px;
     font-size: 10pt;
     margin-bottom: 0.5em;
     color: white;
 }
 
-#api p {
+div#api p {
+    clear: none;
     margin: 0.5em 0 1.5em;
     padding-left: 35px;
 }
 
-#api hr {
+div#api hr {
     margin-bottom: 1em;
     margin-left: 40px;
     width: 80%;
+}
+
+div#api div.toc {
+    margin-left: 35px;
+    width: 80%;
+}
+
+div#api div.toc ol li {
+    display: inline;
+    line-height: 1.3em;
+    list-style: none;
+    margin: 0.3em;
 }
