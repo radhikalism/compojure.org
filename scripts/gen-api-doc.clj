@@ -1,6 +1,4 @@
-#^:shebang '[
-exec java -cp "$HOME/data/libraries/java/compojure/*" clojure.lang.Script "$0" -- "$@"
-]
+#! /usr/bin/env clj
 
 (require '(clojure inspector)
          'compojure)
